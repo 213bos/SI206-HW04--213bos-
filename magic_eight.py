@@ -2,7 +2,8 @@ responses = []
 def ask_question():
     x = input("What is your question? ")
     responses.append(x)
-    print (responses)
+    if x == "quit":
+        quit()
 
 ask_question()
 
@@ -30,3 +31,11 @@ answers = ["It is certain",
 "Very doubtful"]
 
 print(random.choice(answers))
+
+
+
+for x in responses:
+    if x.endswith("?"):
+        pass
+    else:
+        print("I'm sorry, I can only answer questions.")
